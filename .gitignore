@@ -1,0 +1,20 @@
+# Credenciales — NUNCA commitear
+.env
+.env.tuya
+*.key
+secrets/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv*/
+.venv/
+
+# Datos locales
+consumo.csv
+*.csv
+
+# Editor
+.vscode/
+*.swp

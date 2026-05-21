@@ -1,0 +1,16 @@
+[Unit]
+Description=Monitor de consumo Tuya → InfluxDB
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi
+EnvironmentFile=/home/pi/.env.tuya
+ExecStart=/home/pi/venv_tuya/bin/python3 /home/pi/monitor_tuya.py
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
